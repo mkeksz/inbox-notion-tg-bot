@@ -1,0 +1,31 @@
+{
+  "scenes": {
+    "start": "<b>Привет!</b>\nПеред началом работы прочитайте <a href=\"https://telegra.ph/Nastrojka-i-rabota-s-Inbox-Notion-Bot-06-28\">короткую инструкцию</a> по настройке и работе с ботом.\n\n<b>Используйте эти команды, чтобы связать бота с Notion:</b>\n<i>/notion_token [API токен]</i> - Установить API токен Notion\n<i>/notion_database [ID базы данных]</i> - Установить базу данных ящика Notion\n\n<b>Администратор:</b> @mrkeksz",
+    "note": {
+      "success": "Заметка успешно создана!",
+      "success_update": "Заметка успешно дополнена!",
+      "error_page_id": "Не удалось получить редактируемую страницу.\nСоздайте новую заметку."
+    },
+    "language": {
+      "success": "Язык успешно изменен!",
+      "select": "Выберите язык бота",
+      "buttons": {
+        "ru": "\uD83C\uDDF7\uD83C\uDDFA Русский",
+        "en": "\uD83C\uDDFA\uD83C\uDDF8 English"
+      }
+    },
+    "help": "<a href=\"https://telegra.ph/Nastrojka-i-rabota-s-Inbox-Notion-Bot-06-28\">Инструкция</a> по настройке и работе с ботом.\n\n<b>Команды</b>\n/language - Сменить язык бота\n/notion_token [API токен] - Установить API токен Notion\n/notion_database [ID базы данных] - Установить базу данных ящика Notion\n/help - Показать список команд\n\n<b>Администратор:</b> @mrkeksz",
+    "notion_token": {
+      "success": "Notion API токен установлен.\nНе забудьте установить ID базы данных ящика Notion (/notion_database [ID базы данных]).",
+      "invalid_command": "Команда введена неверно.\n<b>Следуйте шаблону:</b> /notion_token [API токен Notion]"
+    },
+    "notion_database": {
+      "success": "Notion база данных установлена.\nНе забудьте установить API токен Notion (/notion_token [API токен]).",
+      "invalid_command": "Команда введена неверно.\n<b>Следуйте шаблону:</b> /notion_database [ID базы данных]"
+    }
+  },
+  "shared": {
+    "error_api": "Не удалось выполнить операцию.\nПроверьте установленный API токен Notion и ID базы данных.",
+    "error_not_found": "Не удалось найти заметку в Notion.\nВозможно она была удалена или перемещена в недоступную область.\nСоздайте новую заметку."
+  }
+}

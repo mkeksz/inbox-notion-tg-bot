@@ -1,0 +1,10 @@
+/node_modules/
+/.git/
+/.idea/
+.eslintrc
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.dev.yml
+.env
+README.md

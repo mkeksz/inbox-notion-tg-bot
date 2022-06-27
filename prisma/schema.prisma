@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  telegram_id        String       @id @unique
+  language           String       @default("en")
+  notion_database_id String?
+  notion_api_token   String?
+  notion_pages       NotionPage[]
+  created_at         DateTime     @default(now())
+  updated_at         DateTime     @default(now())
+}
+
+model NotionPage {
+  id                  String  @id @unique @default(cuid())
+  telegram_message_id String
+  notion_id           String
+  user                User?   @relation(fields: [user_id], references: [telegram_id])
+  user_id             String?
+}

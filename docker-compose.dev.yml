@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db:
+    container_name: pg-inbox-notion-tg-bot
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: test
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./dev_data/postgres:/var/lib/postgresql/data

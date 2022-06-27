@@ -1,0 +1,31 @@
+{
+  "extends": "./tsconfig-checks.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "module": "commonjs",
+    "target": "ES2022",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "text/*": ["src/controllers/text/*"],
+      "joinRequest/*": ["src/controllers/joinRequest/*"],
+      "callbackQuery/*": ["src/controllers/callbackQuery/*"],
+      "*": ["src/*"]
+    },
+    "declaration": false,
+    "emitDeclarationOnly": false,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "sourceMap": false,
+    "removeComments": true,
+    "allowJs": false,
+    "checkJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./src/typings/"]
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}

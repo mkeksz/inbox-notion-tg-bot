@@ -1,0 +1,31 @@
+{
+  "scenes": {
+    "start": "<b>Hi!</b>\nBefore starting work, read <a href=\"https://telegra.ph/Setting-up-and-working-with-Inbox-Notion-Bot-06-28\">a short instruction</a> on setting up and working with the bot.\n\n<b>Use these commands to link the bot to Notion:</b>\n<i>/notion_token [API token]</i> - Install the Notion API token\n<i>/notion_database [Database ID]</i> - Install the Notion inbox database\n\n<b>Administrator:</b> @mrkeksz",
+    "note": {
+      "success": "The note was created successfully!",
+      "success_update": "The note has been successfully updated!",
+      "error_page_id": "Could not get the page being edited.\nCreate a new note."
+    },
+    "language": {
+      "success": "The language was changed successfully!",
+      "select": "Select the language",
+      "buttons": {
+        "ru": "\uD83C\uDDF7\uD83C\uDDFA Русский",
+        "en": "\uD83C\uDDFA\uD83C\uDDF8 English"
+      }
+    },
+    "help": "<a href=\"https://telegra.ph/Setting-up-and-working-with-Inbox-Notion-Bot-06-28\">Instructions</a> on setting up and working with the bot.\n\n<b>Commands</b>\n/language - Change the language of the bot\n/notion_token [API token] - Install the API token Notion\n/notion_database [database ID] - Install the inbox database Notion\n/help - Show the list of commands\n\n<b>Administrator:</b> @mrkeksz",
+    "notion_token": {
+      "success": "The Notion API token has been successfully installed!\nDon't forget to set the Idea mailbox database ID (/notion_database [Database ID])",
+      "invalid_command": "The command was entered incorrectly.\n<b>Follow the pattern:</b> /notion_token [API token Notion]"
+    },
+    "notion_database": {
+      "success": "Notion database is installed.\nDon't forget to install the Notion API token (/notion_token [API token]).",
+      "invalid_command": "The command was entered incorrectly.\n<b>Follow the pattern:</b> /notion_database [Database ID]"
+    }
+  },
+  "shared": {
+    "error_api": "Operation failed.\nCheck the installed API token Notion and the database ID.",
+    "error_not_found": "Couldn't find a note in Notion.\nIt may have been deleted or moved to an inaccessible area."
+  }
+}
