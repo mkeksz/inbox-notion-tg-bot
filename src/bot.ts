@@ -10,6 +10,7 @@ import {PrismaClient} from '@prisma/client'
 import notionToken from 'text/notionToken'
 import language from 'text/language'
 import {Telegraf} from 'telegraf'
+import stats from 'text/stats'
 import start from 'text/start'
 import help from 'text/help'
 import note from 'text/note'
@@ -33,6 +34,7 @@ bot.help(help)
 bot.command('language', language)
 bot.command('notion_token', notionToken)
 bot.command('notion_database', notionDatabase)
+bot.command('stats', stats)
 bot.action(/^lang:(\w\w)$/, setLanguage)
 bot.on('text', note)
 

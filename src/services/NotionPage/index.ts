@@ -10,4 +10,8 @@ export default class NotionPageService extends BaseService {
   public async getByTelegramMessageId(telegram_message_id: string, user_id: string) {
     return await this.database.notionPage.findFirst({where: {telegram_message_id, user_id}})
   }
+
+  public async countPages() {
+    return await this.database.notionPage.count()
+  }
 }

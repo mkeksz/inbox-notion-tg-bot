@@ -13,6 +13,10 @@ export default class UserService extends BaseService {
   public async updateUser(telegram_id: string, data: UserData): Promise<User> {
     return await this.database.user.update({where: {telegram_id}, data})
   }
+
+  public async countUsers(): Promise<number> {
+    return await this.database.user.count()
+  }
 }
 
 interface UserData {

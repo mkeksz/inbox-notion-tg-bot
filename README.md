@@ -7,7 +7,11 @@
 `npm run start`
 
 # Создание интеграции с Notion
-Для работы бота нужно создать интеграцию с вашей базов в Notion.
+Для работы бота нужно создать интеграцию с вашей базой в Notion.
+
+https://www.notion.so/my-integrations
+
+https://developers.notion.com/docs
 
 # Установка для разработки
 ### Установка зависимостей
