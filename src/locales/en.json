@@ -1,6 +1,6 @@
 {
   "scenes": {
-    "start": "<b>Hi!</b>\nBefore starting work, read <a href=\"https://telegra.ph/Setting-up-and-working-with-Inbox-Notion-Bot-06-28\">a short instruction</a> on setting up and working with the bot.\n\n<b>Use these commands to link the bot to Notion:</b>\n<i>/notion_token [API token]</i> - Install the Notion API token\n<i>/notion_database [Database ID]</i> - Install the Notion inbox database\n\nThe bot has <a href=\"https://github.com/mkeksz/inbox-notion-tg-bot\">an open source code</a>.\n\n<b>Administrator:</b> @mrkeksz",
+    "start": "<b>Hi!</b>\nIt's not convenient enough to send short notes to your Notion, is it?\nI'll help you with that. Through me, you can quickly and easily send notes to your inbox in Notion!\n\nI'm completely safe, I can't read and edit your notes from Notion (only create new notes)\n\n\nBefore starting work, read <a href=\"https://telegra.ph/Nastrojka-i-rabota-s-Inbox-Notion-Bot-06-28 \">a short instruction</a> on setting up and working with me.\nMy setup will take no more than 5 minutes.\n\n<b>Use these commands to link me to Notion:</b>\n<i>/notion_token [API token]</i> - Install API token Notion\n<i>/notion_database [database ID]</i> - Install the Notion inbox database\n\n\nI also have <a href=\"https://github.com/mkeksz/inbox-notion-tg-bot \">open source code</a>.\n\n<b>Administrator:</b> @mrkeksz",
     "note": {
       "success": "The note was created successfully!",
       "success_update": "The note has been successfully updated!",
