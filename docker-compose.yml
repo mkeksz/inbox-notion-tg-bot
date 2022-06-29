@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  db:
+    container_name: pg-inbox-notion-tg-bot
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: bot
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+  bot:
+    container_name: inbox-notion-tg-bot
+    build:
+        context: .
+        dockerfile: Dockerfile
+        args:
+          DATABASE_URL: $DATABASE_URL
+          TG_BOT_TOKEN: $TG_BOT_TOKEN
+    restart: always
+#  pgadmin:
+#    container_name: pg-inbox-notion-tg-bot-admin
+#    image: dpage/pgadmin4
+#    restart: on-failure
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: test@mail.com
+#      PGADMIN_DEFAULT_PASSWORD: root
+#    ports:
+#      - "5050:80"

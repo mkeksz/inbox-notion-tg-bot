@@ -6,7 +6,10 @@ WORKDIR /opt/app
 ARG DATABASE_URL
 ARG TG_BOT_TOKEN
 
+ENV DATABASE_URL $DATABASE_URL
+ENV TG_BOT_TOKEN $TG_BOT_TOKEN
+
 RUN npm install --production
 RUN npx prisma@^3.15.2 migrate deploy
 
-CMD ["npm", "start"]
+CMD npm start

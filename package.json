@@ -12,7 +12,9 @@
     "start": "ts-node --transpile-only .",
     "dev": "nodemon -e ts,json --watch src",
     "lint": "eslint .",
-    "docker-compose:dev": "docker-compose -f docker-compose.dev.yml up -d"
+    "docker-compose:db": "docker-compose up db -d",
+    "docker-compose:bot": "docker-compose up bot -d",
+    "docker-compose": "docker-compose up -d"
   },
   "keywords": [
     "notion",

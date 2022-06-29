@@ -13,11 +13,15 @@ https://www.notion.so/my-integrations
 
 https://developers.notion.com/docs
 
-# Установка для разработки
+# Для разработки
 ### Установка зависимостей
 `npm install`
 ### Установка ts-node глобально для работы nodemon
 `npm install -g ts-node`
+### Установка схемы БД
+`prisma db push`
+### Запуск в dev режиме
+`npm run dev`
 
 # Переменные Environment
 `TG_BOT_TOKEN` - API токен Telegram бота
