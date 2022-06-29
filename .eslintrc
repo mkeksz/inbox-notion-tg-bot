@@ -26,7 +26,7 @@
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-explicit-any": "warn",
         "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/no-inferrable-types": "warn",
+        "@typescript-eslint/no-inferrable-types": "off",
         "@typescript-eslint/no-empty-function": "warn"
     }
 }

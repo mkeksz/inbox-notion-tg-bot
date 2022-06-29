@@ -1,6 +1,6 @@
 # Запуск кода в Production
 ### Установка зависимостей
-`npm install --production`
+`npm install --omit=dev`
 ### Миграция базы данных
 `npx prisma@^3.15.2 migrate deploy`
 ### Запуск приложения

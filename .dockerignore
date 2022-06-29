@@ -9,3 +9,4 @@ docker-compose.yml
 .env
 README.md
 /data/
+/prisma/data/
