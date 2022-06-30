@@ -14,7 +14,11 @@
     "lint": "eslint .",
     "docker-compose:db": "docker-compose up db -d",
     "docker-compose:bot": "docker-compose up bot -d",
-    "docker-compose": "docker-compose up -d"
+    "docker-compose": "docker-compose up -d",
+    "prisma:push": "prisma db push",
+    "migrate:dev": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "tunnel": "npx ngrok http 8000"
   },
   "keywords": [
     "notion",

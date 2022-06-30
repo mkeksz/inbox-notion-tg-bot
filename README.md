@@ -27,3 +27,7 @@ https://developers.notion.com/docs
 `TG_BOT_TOKEN` - API токен Telegram бота
 
 `DATABASE_URL` - адрес базы данных PostgreSQL (postgresql://root:1234@localhost:5432/test?schema=public)
+
+`WEBHOOK` - адрес вебхука
+
+`PORT` - порт для прослушивания при вебхуке

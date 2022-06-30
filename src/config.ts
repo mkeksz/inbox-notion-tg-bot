@@ -12,5 +12,7 @@ export default {
   dirs: {
     root: __dirname + '/',
     locales: __dirname + '/locales',
-  }
+  },
+  webhook: process.env['WEBHOOK'],
+  port: Number(process.env['PORT']) || 8000,
 }
