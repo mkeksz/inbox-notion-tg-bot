@@ -11,6 +11,7 @@ export interface BaseContext extends Context {
   user: User
 }
 
+export type MessageContext = NarrowedContext<BaseContext, Types.MountMap['message']>
 export type TextContext = NarrowedContext<BaseContext, Types.MountMap['text']>
 export type TextRegExContext = NarrowedContext<BaseContext & {match: RegExpExecArray}, Types.MountMap['text']>
 export type JoinRequestContext = NarrowedContext<BaseContext, Types.MountMap['chat_join_request']>

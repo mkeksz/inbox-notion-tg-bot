@@ -28,5 +28,8 @@
   "shared": {
     "error_api": "Operation failed.\nCheck the installed API token Notion and the database ID.",
     "error_not_found": "Couldn't find a note in Notion.\nIt may have been deleted or moved to an inaccessible area."
+  },
+  "notion": {
+    "default_link": "Link to view"
   }
 }

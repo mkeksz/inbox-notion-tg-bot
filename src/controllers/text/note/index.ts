@@ -1,27 +1,24 @@
-import {getErrorNotion, createNotionPage, addBlockToNotionPage} from 'text/note/helpers'
-import {TextContext} from 'typings/telegraf'
-import KnownError from 'KnownError'
+import {addBlockToNotionPage, createNotionPage} from './notionHelpers'
+import {MessageContext} from 'typings/telegraf'
+import {getErrorNotion} from './helpers'
+import NoteData from './NoteData'
 
-export default async (ctx: TextContext) => {
-  const lines = ctx.message.text.split('\n')
-  const title = String(lines[0]).trim()
-  const text = lines.length > 0 ? lines.slice(1).join('\n').trim() : null
-
+export default async (ctx: MessageContext) => {
   await ctx.replyWithChatAction('typing')
 
-  if (!ctx.user.notion_api_token || !ctx.user.notion_database_id) throw new KnownError(ctx.locales.shared.error_api)
-
-  const isUpdate = !!ctx.message.reply_to_message
+  const noteData = new NoteData(ctx)
 
   let pageID: string
   try {
-    if (isUpdate) pageID = await addBlockToNotionPage(ctx, ctx.message.text)
-    else pageID = await createNotionPage(ctx, title, text)
-  } catch (error) {throw getErrorNotion(error, ctx)}
+    if (noteData.isAddition) pageID = await addBlockToNotionPage(ctx, noteData.content)
+    else pageID = await createNotionPage(ctx, noteData.title, noteData.content)
+  } catch (error) {
+    throw getErrorNotion(error, ctx)
+  }
 
   const messageID = ctx.message.message_id.toString()
   await ctx.services.notionPage.create(pageID, messageID, ctx.user.telegram_id)
 
-  const replyText = isUpdate ? ctx.locales.scenes.note.success_update : ctx.locales.scenes.note.success
+  const replyText = noteData.isAddition ? ctx.locales.scenes.note.success_update : ctx.locales.scenes.note.success
   return ctx.reply(replyText)
 }

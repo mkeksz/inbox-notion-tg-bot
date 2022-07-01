@@ -2,6 +2,7 @@ import languageChecker from 'middlewares/languageChecker'
 import ServiceManager from 'services/ServiceManager'
 import setLanguage from 'callbackQuery/setLanguage'
 import errorHandler from 'middlewares/errorHandler'
+import setupChecker from 'middlewares/setupChecker'
 import {getLocalesFromFiles} from 'utils/locales'
 import userChecker from 'middlewares/userChecker'
 import notionDatabase from 'text/notionDatabase'
@@ -36,6 +37,6 @@ bot.command('notion_token', notionToken)
 bot.command('notion_database', notionDatabase)
 bot.command('stats', stats)
 bot.action(/^lang:(\w\w)$/, setLanguage)
-bot.on('text', note)
+bot.on('message', setupChecker, note)
 
 export default bot
