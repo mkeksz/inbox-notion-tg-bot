@@ -34,11 +34,14 @@
   "dependencies": {
     "@notionhq/client": "^1.0.4",
     "@prisma/client": "^3.15.2",
+    "cuid": "^2.1.8",
+    "download": "^8.0.0",
     "telegraf": "^4.8.5",
     "ts-node": "^10.8.1",
     "tsconfig-paths": "^4.0.0"
   },
   "devDependencies": {
+    "@types/download": "^8.0.1",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",

@@ -4,7 +4,9 @@
     "note": {
       "success": "The note was created successfully!",
       "success_update": "The note has been successfully updated!",
-      "error_page_id": "Could not get the page being edited.\nCreate a new note."
+      "error_page_id": "Could not get the page being edited.\nCreate a new note.",
+      "error_photo": "Could not get the photo.\nTry again.",
+      "error_download_photo": "Could not download the photo.\nTry again."
     },
     "language": {
       "success": "The language was changed successfully!",

@@ -10,11 +10,13 @@ export async function createNotionPage(ctx: BaseContext, title: string, content:
     properties: {
       title: {title: [{text: {content: title}}]}
     },
-    children: hasChildren ? [{
-      object: 'block',
-      type: 'paragraph',
-      paragraph: {rich_text: content}
-    }] : undefined
+    children: hasChildren ? [
+      {
+        object: 'block',
+        type: 'paragraph',
+        paragraph: {rich_text: content}
+      }
+    ] : undefined
   })
   return page.id
 }
